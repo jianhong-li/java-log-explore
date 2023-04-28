@@ -1,19 +1,27 @@
-这是一个完整的log4j2示例.并且没有依赖slf4j框架. 
+这是一个完整的log4j2示例.并且没有依赖slf4j框架.
+
+> 注: 官方推荐的使用方式并不推荐直接使用.而是与`slf4j` 结合使用. 这样才能发挥最佳的性能.
 
 首先引入依赖:
 
 ```xml
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-api</artifactId>
-    <version>2.14.0</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-core</artifactId>
-    <version>2.14.0</version>
-</dependency>
+<dependencies>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.14.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.14.0</version>
+    </dependency>
+</dependencies>
 ```
+
+以下是依赖关系图:
+
+![](log4j2-maven-dep.png)
 
 log4j2 的配置文件是必须的，用于配置 log4j2 的行为和输出方式。以下是一个简单的 log4j2 配置文件示例，你可以将它放在项目的 src/main/resources 目录下，命名为 log4j2.xml。
 
