@@ -13,6 +13,7 @@
     <module>demo-log4j2</module>
     <module>demo-logback-classic</module>
     <module>demo-logback</module>
+    <module>demo-log4j2-with-slf4j</module>
   </modules>
 
   <name>java-log-explore</name>
