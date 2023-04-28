@@ -105,4 +105,21 @@ slf4j的实现. 这个时候大家都觉得是log4j的日志实现可以作为�
 slf4j不同的back 实现. 而是以日志框架本身为中心, 同时其自己输出的接口就是slf4j接口. 
 
 这就是log42为什么是以 log4j2 在前面的命名. 而1x的时候是 slf4j-xx的命名. 因为不存在一个统一的框架,然后在使用的时候进行"配置"选择实现. 这个
-从logback的实现就可以更进一步的看出来. 因为log4j2还有自己的api类和包.(log4j-api) , 但logback直接以slf4j-api作为标准接口进行实现. 
+从logback的实现就可以更进一步的看出来. 因为log4j2还有自己的api类和包.(log4j-api) , 但logback直接以slf4j-api作为标准接口进行实现.
+
+
+##＃　slf4j-log4j12 与 log4j-slf4j-impl 原理与区别是什么? 
+
+> 来自于chatGPT
+
+slf4j-log4j12 和 log4j-slf4j-impl 是两个不同的库，用于在应用程序中实现日志记录功能。它们之间的原理和区别如下：
+
+slf4j-log4j12
+slf4j-log4j12 是一个SLF4J的实现，它使用log4j作为底层的日志引擎，可以将SLF4J的日志消息转发到log4j来实现日志记录。在使用时，需要在类路径下包含log4j的jar文件以及slf4j-log4j12的jar文件。
+
+log4j-slf4j-impl
+log4j-slf4j-impl 是log4j2中的一个SLF4J桥接实现，可以将所有使用SLF4J API的应用程序日志记录请求重定向到log4j2中。它的主要作用是在使用SLF4J API的应用程序中，使用log4j2作为底层的日志实现。需要注意的是，log4j-slf4j-impl的使用需要在应用程序中排除原始的SLF4J jar文件。
+
+因此，两者的区别在于底层的日志实现不同，但它们的主要功能是相同的：将SLF4J API的日志记录请求重定向到底层的日志实现。
+
+可以看到.其主体不一样, 其它是一个东西的两面.一个是站在slf4j的角度进行阐述.另外一个是站在 log4j的角度进行阐述. 
