@@ -14,6 +14,7 @@
     <module>demo-logback-classic</module>
     <module>demo-logback</module>
     <module>demo-log4j2-with-slf4j</module>
+    <module>demo-slf4j-with-log4j-impl</module>
   </modules>
 
   <name>java-log-explore</name>
