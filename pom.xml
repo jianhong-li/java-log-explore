@@ -11,6 +11,7 @@
   <modules>
     <module>demo-log4j</module>
     <module>demo-log4j2</module>
+      <module>demo-logback</module>
   </modules>
 
   <name>java-log-explore</name>
