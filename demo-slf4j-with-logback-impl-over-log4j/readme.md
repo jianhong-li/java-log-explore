@@ -84,6 +84,12 @@ public class Category implements AppenderAttachable {
 ![img_2.png](img_2.png)
 
 
+最后我们再看一下此项目的整体依赖:
+
+
+![img_3.png](img_3.png)
+
+
 ## Q&A
 
 ### 还有其它类型的over包吗,该怎么使用. 
